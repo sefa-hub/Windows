@@ -1,0 +1,36 @@
+aynı masaüstü ve laptopta 2022 ocaktan beri formatlamadan kullandığım işletim sistemi.
+
+- bilgisayarı kapattım diye düşünüp kapatmadığınızdan kaynaklı olabilir sorunlarınız. kapat derken shift tuşuna basmazsanız kapanmaz uyku gibi davranır.
+- arada şu scripti kullanıp temizlik yapıyorum.
+
+@echo off
+echo sistemdeki junk dosyalar siliniyor, lutfen bekleyin
+del /f /s /q %systemdrive%\*.tmp
+del /f /s /q %systemdrive%\*._mp
+del /f /s /q %systemdrive%\*.log
+del /f /s /q %systemdrive%\*.gid
+del /f /s /q %systemdrive%\*.chk
+del /f /s /q %systemdrive%\*.old
+del /f /s /q %systemdrive%\recycled\*.*
+del /f /s /q %windir%\*.bak
+del /f /s /q %windir%\prefetch\*.*
+rd /s /q %windir%\temp & md %windir%\temp
+del /f /q %userprofile%\cookies\*.*
+del /f /q %userprofile%\recent\*.*
+del /f /s /q “%userprofile%\local settings\temporary ınternet files\*.*”
+del /f /s /q “%userprofile%\local settings\temp\*.*”
+del /f /s /q “%userprofile%\recent\*.*”
+echo junk dosyalar temizlendi!
+echo. & pause
+
+- glary utilities kullanıp temizlik yapıyorum
+
+- windows güncellemelerinden sonra şu scripti kullanıp temizlik yapıyorum.
+
+@echo off
+echo windows update indirme geçmişini temizliyorum...
+rd /s /q c:\windows\softwaredistribution\download
+echo windows update indirme geçmişini temizledim!
+pause
+
+----------scriptleri not defterine yazıp .txt uzantısını .bat yapabilirsiniz. ---------
